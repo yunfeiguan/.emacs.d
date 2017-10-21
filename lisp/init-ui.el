@@ -1,0 +1,34 @@
+(require 'init-elpa)
+
+(set-default-font "Consolas-20")
+(setq default-frame-alist '((font . "Consolas-20")))
+
+(require-package 'color-theme)
+(require-package 'base16-theme)
+
+(setq inihibit-startup-message t)
+
+(scroll-bar-mode -1) ; I hate scroll bars
+(tool-bar-mode -1) ; And I hate tool bars!
+(menu-bar-mode -1) ; And I hate menu bars!
+(setq scroll-step 1)
+
+(setq frame-background-mode 'dark)
+(setq default-frame-alist '((font . "Consolas-20")))
+(transient-mark-mode t) ; I like seeing the mark
+(column-number-mode t) ; And column numbers
+
+(setq mouse-yank-at-point t)
+(global-set-key [mouse-2] 'mouse-yank-primary)
+(global-set-key [right-fringe mouse-2] 'mouse-yank-primary)
+(global-set-key [left-fringt mouse-2] 'mouse-yank-primary)
+(setq x-select-enable-clipboard t)
+(setq x-select-enable-primary nil)
+
+(blink-cursor-mode)
+
+(load-theme 'base16-irblack t)
+(global-font-lock-mode 1)
+(require 'git-commit)
+
+(provide 'init-ui)

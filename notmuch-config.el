@@ -1,0 +1,13 @@
+(setq notmuch-saved-searches
+      `((:name "new" :query "tag:unread AND NOT tag:list" :key ,(kbd "n"))
+        (:name "inbox" :query "tag:inbox" :key ,(kbd "i"))
+        (:name "flagged" :query "tag:flagged" :key ,(kbd "f"))
+        (:name "sent" :query "tag:sent" :key ,(kbd "t"))
+        (:name "drafts" :query "tag:draft" :key ,(kbd "d"))
+        (:name "guile" :query "tag:guile AND tag:unread")
+        (:name "guix" :query "tag:guix AND tag:unread")
+        (:name "rust" :query "tag:rust AND tag:unread")
+        (:name "org" :query "tag:org AND tag:unread")
+        (:name "cryptography" :query "tag:cryptography AND tag:unread")
+        (:name "haskell" :query "tag:haskell AND tag:unread")
+        (:name "all mail" :query "*" :key ,(kbd "a"))))
