@@ -1,4 +1,10 @@
-; Haskell
+;;; init-haskell --- Set up Haskell editing
+
+;;; Commentary:
+;;;
+;;; Just set up basic code style and inferior mode.
+
+;;; Code:
 
 (require 'inf-haskell)
 (setq haskell-program-name "stack ghci")
@@ -19,3 +25,4 @@
 (add-hook 'haskell-mode-hook 'haskell-style)
 
 (provide 'init-haskell)
+;;; init-haskell.el ends here

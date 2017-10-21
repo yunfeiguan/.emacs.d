@@ -1,3 +1,10 @@
+;;; init-miscellaneous --- Random stuff
+
+;;; Commentary: Really, a random grab-bag.  Mostly turning off some of
+;;; the more annoying safeties.
+
+;;; Code:
+
 ;; Changes all yes/no questions to y/n type
 (fset 'yes-or-no-p 'y-or-n-p)
 
@@ -12,3 +19,4 @@
 (setq clean-buffer-list-delay-general 1)
 
 (provide 'init-miscellaneous)
+;;; init-miscellaneous ends here

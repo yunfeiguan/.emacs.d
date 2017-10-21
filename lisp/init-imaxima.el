@@ -1,6 +1,18 @@
-(autoload 'imaxima "imaxima" "Image support for Maxima." t)
-(autoload 'imath-mode "imath" "Interactive Math minor mode." t)
-(setq imaxima-use-maxima-mode-flag t)
-(setq imaxima-fnt-size "Huge")
+;;; init-imaxima --- Set up iMaxima
+
+;;; Commentary:
+;;;
+;;; Just make things larger.
+
+;;; Code:
+
+(if (and (package-installed-p 'imaxima)
+	 (apckage-installed-p 'imath-mode))
+    (progn
+      (require 'imaxima)
+      (require 'imath-mode)
+      (setq imaxima-use-maxima-mode-flag t)
+      (setq imaxima-fnt-size "Huge")))
 
 (provide 'init-imaxima)
+;;; init-imaxima.el ends here

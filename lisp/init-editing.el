@@ -1,3 +1,11 @@
+;;; init-editing --- Editing basics
+
+;;; Commentary:
+;;;
+;;; A grab-bag of things.
+
+;;; Code:
+
 (require 'init-elpa)
 (require 'saveplace)
 
@@ -59,3 +67,4 @@
 (global-whitespace-mode)
 
 (provide 'init-editing)
+;;; init-editing.el ends here

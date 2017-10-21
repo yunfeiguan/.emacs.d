@@ -1,3 +1,11 @@
+;;; init-elap --- Set up the require-package macro and archives
+
+;;; Commentary:
+;;;
+;;; This gives us the three major repositories and a require form that
+;;; installs any package that we need.
+
+;;; Code:
 (require 'package)
 
 (defun require-package (package)
@@ -16,3 +24,4 @@
 (package-initialize)
 
 (provide 'init-elpa)
+;;; init-elpa.el ends here

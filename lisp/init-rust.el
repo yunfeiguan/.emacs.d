@@ -1,3 +1,9 @@
+;;; init-rust --- Edit rust well
+
+;;; Commentary:
+;;; Install completion and on-the-fly syntax checking.
+
+;;; Code:
 (require 'init-elpa)
 (require-package 'company)
 (require-package 'racer)
@@ -26,3 +32,4 @@
              (electric-pair-mode 1)))
 
 (provide 'init-rust)
+;;; init-rust.el ends here

@@ -1,3 +1,10 @@
+;;; init-ui --- Follow my idiosyncratic tastes
+
+;;; Commentary:
+;;; Some combination of setting up colors, fonts, and mouse behavior.
+;;; Also remove UI elements I don't want.
+
+;;; Code:
 (require 'init-elpa)
 
 (set-default-font "Consolas-20")
@@ -32,3 +39,4 @@
 (require 'git-commit)
 
 (provide 'init-ui)
+;;; init-ui.el ends here

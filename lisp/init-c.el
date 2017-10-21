@@ -1,3 +1,18 @@
+;;; init-c --- Initialize C-like languages
+
+;;; Commentary:
+;;;
+;;; Set up a reasonable indent style and source navigation.
+
+;;; Code:
+
+(require 'init-elpa)
+(require-package 'ggtags)
+(require-package 'irony)
+(require-package 'flycheck-irony)
+(require-package 'flycheck)
+(require 'cc-mode)
+
 (setq c-ignore-auto-fill '(string cpp))
 (setq c-max-one-liner-length 72)
 (setq c-report-syntactic-errors t)
@@ -18,6 +33,20 @@
 (setq c-tab-always-indent t)
 (setq indent-tabs-mode t)
 
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (when (derived-mode-p 'c-mode 'c++-mode 'java-mode 'asm-mode)
+              (ggtags-mode 1))))
+
+(add-hook 'c++-mode-hook 'irony-mode)
+(add-hook 'c-mode-hook 'irony-mode)
+(add-hook 'objc-mode-hook 'irony-mode)
+
+(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
+
+(add-hook 'flycheck-mode-hook #'flycheck-irony-setup)
+
 (require 'xcscope)
 
 (provide 'init-c)
+;;; init-c.el ends here

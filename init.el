@@ -1,3 +1,9 @@
+;;; init --- Initialize emacs
+;;; Commentary:
+;;;
+;;; Set up the most basic of basics then run all the specialized init files.
+
+;;; Code:
 ;(package-initialize)
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
@@ -6,7 +12,7 @@
 (load custom-file)
 
 ; Ignore byte-compile warnings
-(setq warnings-to-ignore '())
+(defvar warnings-to-ignore '())
 (add-to-list 'warnings-to-ignore '(free-vars))
 (add-to-list 'warnings-to-ignore '(nresolved))
 (add-to-list 'warnings-to-ignore '(callargs))
@@ -38,3 +44,4 @@
 (require 'init-proof)
 
 (provide 'init)
+;;; init.el ends here

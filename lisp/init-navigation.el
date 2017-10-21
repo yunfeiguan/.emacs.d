@@ -1,3 +1,10 @@
+;;; init-navigation --- Getting around
+
+;;; Commentary:
+;;; Things are built around ido, mostly.
+
+;;; Code:
+
 (require 'init-elpa)
 (require 'ido)
 (require 'recentf)
@@ -32,9 +39,11 @@
 (windmove-default-keybindings)
 
 (defun try-to-add-imenu ()
+  "Add an imenu if we can."
   (condition-case nil (imenu-add-menubar-index) (error nil)))
 (add-hook 'font-lock-mode-hook 'try-to-add-imenu)
 (global-set-key [M-s-i] 'icicle-imenu)
 
 
 (provide 'init-navigation)
+;;; init-navigation.el ends here
