@@ -4,7 +4,7 @@
 ;;; It's a fine browser and it runs fine in Emacs.
 
 ;;; Code:
-(require 'w3m)
+(require-package 'w3m)
 (setq browse-url-browser-function 'w3m-browse-url)
 ;; optional keyboard short-cut
 (global-set-key "\C-xm" 'browse-url-at-point)
