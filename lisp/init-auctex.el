@@ -6,6 +6,8 @@
 
 ;;; Code:
 
+(require-package 'auctex)
+(require-package 'auctex-latexmk)
 (require 'tex)
 
 (setq TeX-auto-save t)

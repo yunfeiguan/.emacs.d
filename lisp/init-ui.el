@@ -36,7 +36,6 @@
 
 (load-theme 'base16-irblack t)
 (global-font-lock-mode 1)
-(require 'git-commit)
 
 (provide 'init-ui)
 ;;; init-ui.el ends here

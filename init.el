@@ -42,6 +42,7 @@
 (require 'init-geiser)
 (require 'init-bbdb)
 (require 'init-proof)
+(require 'init-magit)
 
 (provide 'init)
 ;;; init.el ends here
