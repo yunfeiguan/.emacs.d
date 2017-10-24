@@ -6,16 +6,20 @@
 
 ;;; Code:
 
+(require-package 'haskell-mode)
 (require 'inf-haskell)
-(setq haskell-program-name "stack ghci")
+(setq haskell-program-name
+      (if (locate-file "stack" exec-path nil 'file-executable-p)
+	  "stack ghci"
+	  "ghci"))
 (setq haskell-font-lock-symbols 'unicode)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-unicode-input-method)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 (set-variable 'haskell-indentation-cycle-warn nil)
 
 (defun haskell-style ()
-  "Sets the current buffer to use Haskell Style. Meant to be
-  added to `haskell-mode-hook'"
+  "Set the current buffer to use Haskell Style.
+Meant to be added to `haskell-mode-hook'"
   (interactive)
   (setq tab-width 4
         haskell-indentation-layout-offset 4
