@@ -9,7 +9,8 @@
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
 (setq custom-file "~/.emacs.d/custom.el")
-(load custom-file)
+(if (file-exists-p custom-file)
+  (load custom-file))
 
 ; Ignore byte-compile warnings
 (defvar warnings-to-ignore '())
