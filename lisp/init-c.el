@@ -42,6 +42,14 @@
 (add-hook 'c-mode-hook 'irony-mode)
 (add-hook 'objc-mode-hook 'irony-mode)
 
+(add-hook 'c++-mode-hook
+	  (lambda ()
+	    (setq irony-additional-clang-options (quote ("-std=c11")))))
+
+(add-hook 'c-mode-hook
+	  (lambda ()
+	    (setq irony-additional-clang-options (quote ("-std=c++14")))))
+
 (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
 
 (add-hook 'flycheck-mode-hook #'flycheck-irony-setup)
