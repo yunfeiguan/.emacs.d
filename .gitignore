@@ -16,3 +16,4 @@ mastodon.plstore
 network-security.data
 custom.el
 irony
+tramp
