@@ -11,5 +11,7 @@
 (require-package 'magit)
 (require-package 'evil-magit)
 
+(require 'evil-magit)
+
 (provide 'init-magit)
 ;;; init-magit.el ends here
