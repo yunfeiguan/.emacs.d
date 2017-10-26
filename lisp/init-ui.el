@@ -7,9 +7,6 @@
 ;;; Code:
 (require 'init-elpa)
 
-(set-default-font "Consolas-20")
-(setq default-frame-alist '((font . "Consolas-20")))
-
 (require-package 'color-theme)
 (require-package 'base16-theme)
 
@@ -21,7 +18,6 @@
 (setq scroll-step 1)
 
 (setq frame-background-mode 'dark)
-(setq default-frame-alist '((font . "Consolas-20")))
 (transient-mark-mode t) ; I like seeing the mark
 (column-number-mode t) ; And column numbers
 
