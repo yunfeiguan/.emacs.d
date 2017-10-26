@@ -7,7 +7,7 @@
 ;;; Code:
 
 (add-to-list 'auto-mode-alist '("mutt-" . mail-mode))
-(if (package-installed-p 'notmuch)
+(if (locate-library "notmuch" nil nil nil)
     (require 'notmuch))
 
 (provide 'init-mail)
