@@ -6,11 +6,11 @@
 
 ;;; Code:
 
-(if (and (package-installed-p 'imaxima)
-	 (apckage-installed-p 'imath-mode))
+(if (and (locate-library "imaxima" nil nil nil)
+	 (locate-library "imath" nil nil nil))
     (progn
       (require 'imaxima)
-      (require 'imath-mode)
+      (require 'imath)
       (setq imaxima-use-maxima-mode-flag t)
       (setq imaxima-fnt-size "Huge")))
 
