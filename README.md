@@ -9,7 +9,7 @@ screen resolution), I configure that in `.Xresources` with a line like:
 emacs.font: Inconsolata-22
 ```
 
-I also, normally, start an Emacs daemon when I run in using
+I also, normally, start an Emacs daemon, when I log in, using
 systemd. To do so, create a file with a name like
 `$HOME/.config/systemd/user/emacs.service` containing:
 ```ini
