@@ -66,5 +66,7 @@
 (setq whitespace-style '(face trailing lines-tail empty space-before-tab))
 (global-whitespace-mode)
 
+(add-to-list 'auto-mode-alist '("CMakeLists." . cmake-mode))
+
 (provide 'init-editing)
 ;;; init-editing.el ends here
