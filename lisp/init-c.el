@@ -20,8 +20,8 @@
 
 (c-add-style "ceph-style"
 	     '("stroustrup"
-	       (indent-tabs-mode . t) ; use spaces rather than tabs
-	       (c-basic-offset . 2) ; indent by four spaces
+	       (indent-tabs-mode . nil) ; use spaces rather than tabs
+	       (c-basic-offset . 2) ; indent by two spaces
 	       (c-offsets-alist . ((innamespace . [0])))))
 
 
@@ -31,7 +31,7 @@
 			 (awk-mode . "awk")
 			 (other . "linux")))
 (setq c-tab-always-indent t)
-(setq indent-tabs-mode t)
+(setq indent-tabs-mode nil)
 
 (add-hook 'c-mode-common-hook
           (lambda ()
