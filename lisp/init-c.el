@@ -44,11 +44,11 @@
 
 (add-hook 'c++-mode-hook
 	  (lambda ()
-	    (setq irony-additional-clang-options (quote ("-std=c11")))))
+	    (setq irony-additional-clang-options (quote ("-std=c++14")))))
 
 (add-hook 'c-mode-hook
 	  (lambda ()
-	    (setq irony-additional-clang-options (quote ("-std=c++14")))))
+	    (setq irony-additional-clang-options (quote ("-std=c11")))))
 
 (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)
 
