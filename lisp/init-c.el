@@ -8,6 +8,8 @@
 
 (require 'init-elpa)
 (require-package 'ggtags)
+(require-package 'cpputils-cmake)
+(require 'cpputils-cmake)
 (require-package 'irony)
 (require-package 'flycheck-irony)
 (require-package 'flycheck)
