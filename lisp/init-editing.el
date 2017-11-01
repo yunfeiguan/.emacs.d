@@ -11,6 +11,7 @@
 
 (require-package 'rainbow-delimiters)
 (require-package 'flycheck)
+(require-package 'clean-aindent-mode)
 
 (set-language-environment "UTF-8") ; Unicode über alles
 (show-paren-mode t) ; Show mactching parentheses
@@ -62,11 +63,19 @@
 (add-hook 'html-mode-hook 'flyspell-prog-mode)
 (add-hook 'tex-mode-hook 'flyspell-prog-mode)
 
+; Errant whitespace
+
 (require 'whitespace)
 (setq whitespace-style '(face trailing lines-tail empty space-before-tab))
 (global-whitespace-mode)
 
+; CmakeLists.txt files are CMake, not Org.
+
 (add-to-list 'auto-mode-alist '("CMakeLists." . cmake-mode))
+
+; Clean indentation
+
+(add-hook 'prog-mode-hook 'clean-aindent-mode)
 
 (provide 'init-editing)
 ;;; init-editing.el ends here
