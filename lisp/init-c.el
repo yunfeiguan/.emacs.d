@@ -7,11 +7,11 @@
 ;;; Code:
 
 (require 'init-elpa)
-(require-package 'ggtags)
-(require 'gtags)
 (require-package 'cpputils-cmake)
 (require 'cpputils-cmake)
 (require-package 'irony)
+(require-package 'rtags)
+(require-package 'company-rtags)
 (require-package 'flycheck-irony)
 (require-package 'flycheck)
 (require 'cc-mode)
@@ -38,23 +38,6 @@
 (setq c-tab-always-indent t)
 (setq indent-tabs-mode nil)
 
-; GGTAGS
-
-(add-hook 'c-mode-common-hook
-          (lambda ()
-            (when (derived-mode-p 'c-mode 'c++-mode 'java-mode 'asm-mode)
-              (ggtags-mode 1))))
-
-
-(define-key ggtags-mode-map (kbd "C-c g s") 'ggtags-find-other-symbol)
-(define-key ggtags-mode-map (kbd "C-c g h") 'ggtags-view-tag-history)
-(define-key ggtags-mode-map (kbd "C-c g r") 'ggtags-find-reference)
-(define-key ggtags-mode-map (kbd "C-c g f") 'ggtags-find-file)
-(define-key ggtags-mode-map (kbd "C-c g c") 'ggtags-create-tags)
-(define-key ggtags-mode-map (kbd "C-c g u") 'ggtags-update-tags)
-
-(setq-local imenu-create-index-function #'ggtags-build-imenu-index)
-
 ; Irony/Flycheck
 
 (add-hook 'c++-mode-hook 'irony-mode)
@@ -80,6 +63,14 @@
 ; Folding!
 
 (add-hook 'c-mode-common-hook 'hs-minor-mode)
+
+; rtags
+
+(setq rtags-completions-enabled t)
+(eval-after-load 'company
+  '(add-to-list 'company-backends 'company-rtags))
+(setq rtags-autostart-diagnostics t)
+(rtags-enable-standard-keybindings)
 
 (provide 'init-c)
 ;;; init-c.el ends here
