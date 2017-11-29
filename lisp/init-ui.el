@@ -8,7 +8,10 @@
 (require 'init-elpa)
 
 (require-package 'color-theme)
-(require-package 'base16-theme)
+;(require-package 'base16-theme)
+
+(color-theme-initialize)
+(color-theme-renegade)
 
 (setq inihibit-startup-message t)
 
@@ -30,7 +33,7 @@
 
 (blink-cursor-mode)
 
-(load-theme 'base16-irblack t)
+;(load-theme 'base16-irblack t)
 (global-font-lock-mode 1)
 
 (provide 'init-ui)
