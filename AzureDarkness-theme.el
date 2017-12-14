@@ -3,7 +3,7 @@
 
 (custom-theme-set-faces
  'AzureDarkness
- '(default ((t (:family "Consolas" :foundry "MS  " :width normal :height 215 :weight normal :slant normal :underline nil :overline nil :strike-through nil :box nil :inverse-video nil :foreground "#888888" :background "black" :stipple nil :inherit nil))))
+ '(default ((t (:foreground "#888888" :background "black"))))
  '(cursor ((t (:background "SpringGreen2"))))
  '(fixed-pitch ((t nil)))
  '(variable-pitch ((t (:family "EB Garamond"))))
