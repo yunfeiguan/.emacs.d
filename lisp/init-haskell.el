@@ -7,11 +7,11 @@
 ;;; Code:
 
 (require-package 'haskell-mode)
-(require 'inf-haskell)
-(setq haskell-program-name
-      (if (locate-file "stack" exec-path nil 'file-executable-p)
-	  "stack ghci"
-	  "ghci"))
+(require-package 'intero)
+(require 'haskell-mode)
+(require 'intero)
+
+(add-hook 'haskell-mode-hook 'intero-mode)
 (setq haskell-font-lock-symbols 'unicode)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-unicode-input-method)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
