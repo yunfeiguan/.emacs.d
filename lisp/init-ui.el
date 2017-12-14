@@ -7,11 +7,7 @@
 ;;; Code:
 (require 'init-elpa)
 
-(require-package 'color-theme)
-;(require-package 'base16-theme)
-
-(color-theme-initialize)
-(color-theme-renegade)
+(load-theme 'AzureDarkness t)
 
 (setq inihibit-startup-message t)
 
