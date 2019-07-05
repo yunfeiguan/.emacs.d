@@ -46,7 +46,7 @@
 
 (add-hook 'c++-mode-hook
 	  (lambda ()
-	    (setq irony-additional-clang-options (quote ("-std=c++14")))))
+	    (setq irony-additional-clang-options (quote ("-std=c++17")))))
 
 (add-hook 'c-mode-hook
 	  (lambda ()
