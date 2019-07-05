@@ -26,8 +26,6 @@
 (add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
 (add-hook 'rust-mode-hook
           '(lambda ()
-             (setq racer-cmd  "/bin/racer")
-             (setq racer-rust-src-path "/usr/src/rust/src")
              (local-set-key (kbd "TAB") #'company-indent-or-complete-common)
              (electric-pair-mode 1)))
 
