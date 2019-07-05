@@ -21,7 +21,7 @@
   (add-to-list 'org-file-apps '("\\.x?html?\\'" .
 				(w3m-find-file file)) t))
 
-(add-to-list 'auto-mode-alist '("\\.\\(org\\  |org_archive\\|txt\\)$" .
+(add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\)$" .
                                 org-mode))
 (setq org-journal-dir "~/org/journal")
 (setq org-startup-indented t)
